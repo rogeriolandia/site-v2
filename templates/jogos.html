@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rogeriolandia</title>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/jogos.css">
+
+</head>
+<body>
+    <div id="flash-container">
+        <script>
+          window.onload = function() {
+            const ruffle = window.RufflePlayer.newest();
+            const container = document.getElementById("flash-container");
+            const player = ruffle.createPlayer();
+            container.appendChild(player);
+            
+                player.load("jogos/");
+
+                function toggleFullscreen() {
+          const elem = document.getElementById("flash-container");
+
+          if (document.fullscreenElement) {
+            document.exitFullscreen();
+          } else {
+            elem.requestFullscreen();
+          }
+        }
+        
+        document.getElementById("fullscreen-btn").addEventListener("click", toggleFullscreen);
+        };
+        </script>
+    </div>
+    <button id="fullscreen-btn">Tela Cheia</button>
+</body>
+</html>
