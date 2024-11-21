@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rogeriolandia</title>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body>
+    <div id="flash-container">
+        <script>
+          window.onload = function() {
+            const ruffle = window.RufflePlayer.newest();
+            const container = document.getElementById("flash-container");
+            const player = ruffle.createPlayer();
+            container.appendChild(player);
+            
+                player.load("./jogos/ruffle/bloxorz.swf");
+            };
+        </script>
+    </div>
+</body>
+</html>
